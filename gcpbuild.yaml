@@ -1,6 +1,6 @@
 steps:
   - id: "Rodando docker-compose"
-    name: 'grc.io/$PROJECT_ID/docker-compose'
+    name: 'grc.io/$PROJECT_ID/docker-compose:1.24.0'
     args: ['-f', 'docker-compose-gcp.yaml', 'up', '-d']
     
   - id: "Rodando docker ps"
@@ -26,4 +26,3 @@ steps:
   - id: "Executando testes"
     name: 'gcr.io/cloud-builders/docker'
     args: ['exec','-t','app','php','/var/www/vendor/bin/phpunit','-c','/var/www/phpunit.xml']            
-    
