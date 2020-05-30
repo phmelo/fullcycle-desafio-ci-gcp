@@ -63,7 +63,6 @@ Solução:
 - Entrar no market place do Github e instalar o Google Cloud Build, vinculando a conta e o projeto criado no GCP.
 - Alterar a Trigger responsável pelo pipeline do Laravel para só ser chamada caso seja criado um pull request no GitHub, na branch "develop"
   - Event: Pull request (GitHub App only)
-  - Source: Base branch ^develop$
 - Criar um novo branch no projeto Laravel, chamado Develop, fazer uma alteração e jogar no repositório.
   - git checkout -b develop
   - Alterar qualquer arquivo
